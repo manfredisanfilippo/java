@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gokart.controller.LoginDocumentController">
+   <children>
+      <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@../../../view/Login.css">
+         <children>
+            <Label layoutX="126.0" layoutY="103.0" text="Welcome Back!" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login_username" layoutX="78.0" layoutY="231.0" prefHeight="45.0" prefWidth="265.0" promptText="Username" />
+            <PasswordField fx:id="login_password" layoutX="79.0" layoutY="319.0" prefHeight="45.0" prefWidth="265.0" promptText="Password" />
+            <Button fx:id="login_btn" layoutX="92.0" layoutY="433.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="237.0" text="LOGIN" onAction="#login">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="78.0" layoutY="584.0" text="Don't have an account?" textFill="WHITE" />
+            <ComboBox fx:id="login_role" layoutX="212.0" layoutY="580.0" onAction="#switchForm" prefWidth="150.0" promptText="Choose role" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="admin_form" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@../../../view/Login.css" visible="false">
+         <children>
+            <Label layoutX="111.0" layoutY="103.0" text="Register Account" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="admin_username" layoutX="78.0" layoutY="239.0" prefHeight="45.0" prefWidth="265.0" promptText="Username" />
+            <PasswordField fx:id="admin_password" layoutX="78.0" layoutY="302.0" prefHeight="45.0" prefWidth="265.0" promptText="Password" />
+            <Button fx:id="admin_signupBtn" layoutX="92.0" layoutY="454.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="237.0" text="SIGNUP" onAction="#signup">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="78.0" layoutY="584.0" text="Alredy have an account?" textFill="WHITE" />
+            <Hyperlink fx:id="admin_signin" layoutX="233.0" layoutY="581.0" onAction="#signinForm" text="sign in her" />
+            <Label layoutX="185.0" layoutY="151.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="admin_confirm_password" layoutX="78.0" layoutY="363.0" prefHeight="45.0" prefWidth="265.0" promptText="Confirm Password" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="driver_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@../../../view/Login.css" visible="false">
+         <children>
+            <Label layoutX="111.0" layoutY="103.0" text="Register Account" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="driver_username" layoutX="78.0" layoutY="239.0" prefHeight="45.0" prefWidth="265.0" promptText="Username" />
+            <PasswordField fx:id="driver_password" layoutX="78.0" layoutY="302.0" prefHeight="45.0" prefWidth="265.0" promptText="Password" />
+            <Button fx:id="driver_signupBtn" layoutX="92.0" layoutY="454.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="237.0" text="SIGNUP" onAction="#signup">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="78.0" layoutY="584.0" text="Alredy have an account?" textFill="WHITE" />
+            <Hyperlink fx:id="driver_signin" layoutX="233.0" layoutY="581.0" onAction="#signinForm" text="sign in her" />
+            <Label layoutX="185.0" layoutY="151.0" text="Driver" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="driver_confirm_password" layoutX="78.0" layoutY="363.0" prefHeight="45.0" prefWidth="265.0" promptText="Confirm Password" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="refree_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="bg-form" stylesheets="@../../../view/Login.css" visible="false">
+         <children>
+            <Label layoutX="111.0" layoutY="103.0" text="Register Account" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="refree_username" layoutX="78.0" layoutY="239.0" prefHeight="45.0" prefWidth="265.0" promptText="Username" />
+            <PasswordField fx:id="refree_password" layoutX="78.0" layoutY="302.0" prefHeight="45.0" prefWidth="265.0" promptText="Password" />
+            <Button fx:id="refree_signupBtn" layoutX="92.0" layoutY="454.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="237.0" text="SIGNUP" onAction="#signup">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="78.0" layoutY="584.0" text="Alredy have an account?" textFill="WHITE" />
+            <Hyperlink fx:id="refree_signin" layoutX="233.0" layoutY="581.0" onAction="#signinForm" text="sign in her" />
+            <Label layoutX="185.0" layoutY="151.0" text="Referee" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="refree_confirm_password" layoutX="78.0" layoutY="363.0" prefHeight="45.0" prefWidth="265.0" promptText="Confirm Password" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
